@@ -1,0 +1,88 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/*
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 700px;
+  margin: 6.25rem auto;
+}
+.accordion-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  row-gap: 2rem;
+  column-gap: 1.5rem;
+  align-items: center;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+.accordion-number,
+.accordion-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.accordion-number {
+  color: #ced4da;
+}
+
+.accordion-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: #087f5b;
+}
+.accordion-hidden-box {
+  /* 2/3 */
+  display: none;
+  grid-column: 2;
+}
+
+.accordion-hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.accordion-hidden-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #868e96;
+  list-style-position: inside;
+}
+
+.accordion-open {
+  border-top: 4px solid #087f5b;
+}
+
+.accordion-open .accordion-hidden-box {
+  display: block;
+}
+
+.accordion-open .accordion-number,
+.accordion-open .accordion-text {
+  color: #087f5b;
+}
