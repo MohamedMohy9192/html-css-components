@@ -1,0 +1,132 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/*
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 5.375rem;
+  position: relative;
+  width: 800px;
+  margin: 6.25rem auto;
+  background-color: #087f5b;
+  border-radius: 0.5rem;
+  padding: 2rem 3rem 2rem 5.375rem;
+}
+
+.carousel-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 0.5rem;
+  /* The transform CSS property lets you rotate, scale, skew, or translate an element. 
+    The scale() function is specified with either one or two values, which represent the amount of scaling to be applied in each direction.
+    scale(sx)
+    scale(sx, sy)   
+    */
+  transform: scale(1.5);
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0.75rem 1.5rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.carousel-testimonial {
+}
+
+.carousel-testimonial-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #e6fcf5;
+}
+
+.carousel-testimonial-author {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  color: #c3fae8;
+}
+.carousel-testimonial-author-job {
+  font-size: 0.75rem;
+  color: #c3fae8;
+}
+
+/* CONTROLS */
+.carousel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  background-color: #fff;
+  /* buttons have bydefault a border we need to remove */
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0.75rem 1.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  stroke: #087f5b;
+}
+
+.carousel-btn-left {
+  left: 0;
+  /* Vertically center the absolute position element in its container */
+  /* top: calc(50% - 20px); */
+  top: 50%;
+  /* -50% will move the element exacly 50% of its height back to the top */
+  transform: translate(-50%, -50%);
+}
+
+.carousel-btn-right {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 32px);
+}
+
+.carousel-dots .dot {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border: 2px solid #087f5b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dots .dot--fill {
+  background-color: #087f5b;
+}

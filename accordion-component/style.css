@@ -15,12 +15,12 @@ GREY COLOR: #343a40
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  line-height: 1;
 }
 
 body {
   font-family: "Inter", sans-serif;
   color: #343a40;
+  line-height: 1;
 }
 
 .accordion {
