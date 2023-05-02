@@ -1,0 +1,61 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/*
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1;
+}
+
+table {
+  width: 800px;
+  /* The border-collapse CSS property sets whether cells inside a <table> have shared or separate borders. */
+  /* if we didn't specify any borders around cells
+  by default we got a white border around the cells if we specify a background color for them so to get rid of these borders we use this property*/
+  border-collapse: collapse;
+  margin: 100px auto;
+  font-size: 1.125rem;
+}
+
+th,
+td {
+  /* border: 1px solid #343a40; */
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+/* Selecting the table row inside the table head */
+thead tr {
+  background-color: #087f5b;
+  color: white;
+}
+
+/* Selecting only the table head cells tht are inside of the table head */
+thead th {
+  /* the make the columns have the exact same width
+  we need to format the width of the head cells and then the entire table will follow */
+  width: 25%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+tbody tr:nth-child(even) {
+  background-color: #e9ecef;
+}
