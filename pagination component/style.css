@@ -1,0 +1,84 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/*
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 200px;
+}
+
+.pagination-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #087f5b;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.pagination-btn:hover {
+  background-color: #087f5b;
+  outline-color: #087f5b;
+}
+
+.pagination-btn:hover .pagination-btn-icon {
+  stroke: white;
+}
+.pagination-btn-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #087f5b;
+}
+
+.pagination-num:link,
+.pagination-num:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: #343a40;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.pagination-num:hover,
+.pagination-num:active,
+/* and selector select an element which has the both classes
+we do that to overwrite the color in the link and visited slector which has
+higher spcificty */
+.pagination-num.pagination-selected {
+  background-color: #087f5b;
+  color: white;
+}
